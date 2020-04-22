@@ -1,0 +1,70 @@
+1. AJAX stands for Asynchronous JavaScript and XML.
+
+2. XML stands for extensible Markup Language.
+
+3. AJAX uses the built-in browser object called XMLHttpRequest() to request data from the server. 
+
+4. AJAX allows the web page to make changes asynchronously, meaning it can update parts of the website without reloading the whole page. This is possible because AJAX exchanges data with the server behind the scenes. This better User Experience (UX). 
+
+5. Explain the basic five steps involved in the execution of an AJAX XMLHttpRequest() between the browser and the server. 
+a. An event can occur on the web page when the page is loaded or when a button is clicked. 
+b. An XMLHttpRequest() object sends a request to the server. 
+c. The server sends back a response to the web page that made the request. 
+d. The response is read by JavaScript. 
+e. JavaScript executes the page update. 
+
+6. The core of AJAX is made up of XMLHttpRequest object. 
+
+7. The XMLHttpRequest object is used to exchange data with a web server asynchronously.
+
+8. variable = new XMLhttpRequest(); 
+
+9. const xhttps = new XMLHttpRequest();
+
+10.  XMLHttpRequest() constructor initializes an XMLHttpRequest() object. It  must be called before other method calls.
+
+11. Live servers do not use http. https is secured.
+
+12. The New keyword. 
+
+13. To create an instance of the ArchiveTemp.
+ArchiveTemp() constructor function
+
+14. 
+a. It creates an object from constructor function like XMLHttpRequest(). 
+b. It sets the new object's internal, inaccessible/ private, a property of prototype to constructor function's external; accessible, prototype object. Every object has a prototype property. 
+c. It executes the constructor function, using the newly created object whenever this is mentioned. 
+d. The new keyword makes this keyword point to the newly created object. The constructor function refers to the function that follows the new keyword. 
+e. It returns this if the function does not return its own object.
+
+15. 
+xhttps.onreadystatechange = function () { 
+        if (this.readyState === 4 && this.status === 200) { 
+            console.log(this.responseText);
+            console.log(JSON.parse(this.responseText));
+            const data = JSON.parse(this.responseText);
+            document.getElementById("movie-title").innerHTML = data.Title;
+            document.getElementById("poster").src = data.Poster;
+            document.getElementById("director").innerHTML = data.Director;
+            document.getElementById("writer").innerHTML = data.Writer; 
+            document.getElementById("genre").innerHTML = data.Genre;
+            document.getElementById("plot").innerHTML = data.Plot;
+        } 
+
+16. XMLHttpRequest.open() initializes a newly-created request or reinitializing a existing one. 
+
+17. 
+XMLHttpRequest.open() code example from my project: 
+xhttps.open("GET", url, true); 
+
+18. 
+GET is the method and the value of the first parameter goes to open()). URL is the URL we are sending our request. and True means that you are creating the request asynchronously which is the value of the third parameter passed to open()).
+
+19. xttps.send(); 
+
+20. 
+
+The send() method accepts any parameter which lets you specify the request's body.  
+If the request method is GET or HEAD, the body parameter is ignored, request body is null. 
+The body parameter is not ignored with requests like PUT, this request modified the body 
+content. GET/HEAD do not.

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HW 8 OMDB Api App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper" id="main_content">
+      <h2>OMDb API App</h2>
+      <h3 class="aboutMyapi">Search your favorite movie!</h3>
+      <input
+        type="text"
+        id="movie"
+        placeholder="Search movie"
+        autocomplete="off"
+      />
+      <div id="container">
+        <h1 id="movie-title">Movie Title</h1>
+        <img id="poster" />
+        <p>Year: <span id="year"></span></p>
+        <p>Released: <span id="released"></span></p>
+        <p>Run Time: <span id="runtime"></span></p>
+        <p>Director/s: <span id="director"></span></p>
+        <p>Writer/s: <span id="writer"></span></p>
+        <p>Genre: <span id="genre"></span></p>
+        <p>Plot: <span id="plot"></span></p>
+        <button id="btn">Get Movie Info</button>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
